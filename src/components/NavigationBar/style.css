@@ -1,0 +1,85 @@
+/* NavBar.css */
+
+@font-face {
+  font-family: Space Grotesk;
+  src: url("../../css/fonts/SpaceGrotesk/SpaceGrotesk-Regular.ttf");
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.00);   
+    color: black;
+    padding: 10px 20px;
+    border-bottom: 3px solid  rgba(255, 255, 255, 0.00);
+  }
+  
+  .branding {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    color: black;
+  }
+
+  .brand-name{
+    font-family: Space Grotesk, sans-serif;
+    font-weight: bold;
+    width: 155px;
+    height: 30px;
+    flex-shrink: 0;
+    size: 2.5 rem;
+  }
+
+  .logo{
+    max-width: 50px; /* Set your desired logo size */
+    margin-right: 5px;
+  }
+  
+  .nav-items ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+  }
+  
+  .nav-items ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  .nav-items ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-family: Space Grotesk, sans-serif;
+    
+  }
+  
+  .icons {
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .icons i {
+    margin-right: 20px;
+    cursor: pointer;
+  }
+
+  .center-nav {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+  }
+  
