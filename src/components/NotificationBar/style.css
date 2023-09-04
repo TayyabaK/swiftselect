@@ -4,34 +4,14 @@
     src: url("../../css/fonts/SpaceGrotesk/SpaceGrotesk-Regular.ttf");
  }
 
-.notification-bar {
+ .notification-bar {
+    background-color: black;
     display: flex;
-    height: 24px;
-    justify-content: space-between;
-    align-items: center;
-    background: var(--black-900, #121212);   
-
 }
-
-.close-icon {
-    width: 24px;
-    height: 24px;
-    cursor: pointer;
-
-}
-
-
 
 .notification-text {
-    padding: 8px 16px 8px 16px;
-    color: var(--White, #FFF);
+    flex: 1;
     text-align: center;
-    font-feature-settings: 'clig' off, 'liga' off;
-
-    font-family: Space Grotesk;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 20px; 
+    color: white;
 }
 

@@ -1,16 +1,16 @@
-import { Box, Flex } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 import "./style.css";
 import {RxCross2} from "react-icons/rx";
 
 const NotificationBar = () => {
 
     return (
-        <Box className="notification-bar" padding={'6px'}>
+        <Flex className="notification-bar" justifyContent="space-between" alignItems="center" padding={'6px'}>
         
-            <p className="notification-text">70% discount - Free shipping worldwide</p>
+            <p className="notification-text" style={{textAlign: 'center'}}>70% discount - Free shipping worldwide</p>
 
-            <RxCross2 color="#fff" fontWeight={900}/>
-        </Box>
+           <RxCross2 fontWeight={900} color="white"/>
+        </Flex>
     );
 }
 
