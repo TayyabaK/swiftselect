@@ -56,37 +56,52 @@ const NavBar = () => {
               <ChevronDownIcon />
             </Box>
           ))}
-        </UnorderedList>
-
-      
-        <IconButton
-          aria-label="Open Menu"
-          size="lg"
-          ml={"5rem"}
-          icon={<HamburgerIcon />}
-          onClick={toggleDrawer}
-          display={{ base: 'flex', md: 'none' }}
-        />
+        </UnorderedList> 
       </Box>
 
       <Box
         width="400px"
-        display="flex"
         padding="0.7rem 1.5rem"
         justifyContent="flex-end"
         gap="1rem"
+        display={{ base: 'none', md: 'flex' }}
       >
         <FaSearch width="28px" height="28px" color="black" />
         <FaUser width="28px" height="28px" color="black" />
         <FaShoppingCart width="28px" height="28px" color="black" />
       </Box>
 
+      <Box display={{ base: 'block', md: 'none' }}>
+        <IconButton
+            aria-label="Open Menu"
+            size="lg"
+            ml={"5rem"}
+            icon={<HamburgerIcon />}
+            onClick={toggleDrawer}
+            display={{ base: 'flex', md: 'none' }}
+          />
+      </Box>
+
       <Drawer placement="right" onClose={toggleDrawer} isOpen={isOpen}>
         <DrawerOverlay />
         <DrawerContent>
-          <DrawerCloseButton />
+          <DrawerCloseButton onClick={toggleDrawer}/>
           <DrawerHeader>Menu</DrawerHeader>
           <DrawerBody>
+            <Box 
+              display="flex"
+              flexDirection="column"
+              listStyleType="none"
+              alignItems="center"
+              marginBottom={"1rem"}
+              gap="2rem"
+              >
+
+              <FaSearch width="28px" height="28px" color="black" />
+              <FaUser width="28px" height="28px" color="black" />
+              <FaShoppingCart width="28px" height="28px" color="black" />
+            </Box>
+         
             <UnorderedList
               display="flex"
               flexDirection="column"
