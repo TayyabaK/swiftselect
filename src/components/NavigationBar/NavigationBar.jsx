@@ -35,6 +35,8 @@ const NavBar = () => {
       display="flex"
       justifyContent="space-between"
       padding="0.7rem 1.5rem"
+      margin= "0px 0px 0px 35px"
+
       alignItems="center"
     >
       <Box width="400px">
