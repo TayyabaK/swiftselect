@@ -87,21 +87,7 @@ const NavBar = () => {
         <DrawerContent>
           <DrawerCloseButton onClick={toggleDrawer}/>
           <DrawerHeader>Menu</DrawerHeader>
-          <DrawerBody>
-            <Box 
-              display="flex"
-              flexDirection="column"
-              listStyleType="none"
-              alignItems="center"
-              marginBottom={"1rem"}
-              gap="2rem"
-              >
-
-              <FaSearch width="28px" height="28px" color="black" />
-              <FaUser width="28px" height="28px" color="black" />
-              <FaShoppingCart width="28px" height="28px" color="black" />
-            </Box>
-         
+          <DrawerBody>           
             <UnorderedList
               display="flex"
               flexDirection="column"
@@ -119,6 +105,19 @@ const NavBar = () => {
                 </ListItem>
               ))}
             </UnorderedList>
+
+            <Box 
+              display="flex"
+              justifyContent="center"
+              marginTop={"1rem"}
+              gap="2rem"
+              >
+
+              <FaSearch width="28px" height="28px" color="black" />
+              <FaUser width="28px" height="28px" color="black" />
+              <FaShoppingCart width="28px" height="28px" color="black" />
+            </Box>
+         
           </DrawerBody>
         </DrawerContent>
       </Drawer>
