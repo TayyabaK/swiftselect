@@ -3,6 +3,7 @@ import NavBar from "../components/NavigationBar/NavigationBar";
 import { HeroSection } from "../components/HeroSection/Herosection";
 import { Box } from "@chakra-ui/react";
 import NewArrivals from "../components/NewArrivals/NewArrivals";
+import ImagePrompt from "../components/ImagePrompt/ImagePrompt";
 
 const LandingPage = () => {
 
@@ -12,6 +13,7 @@ const LandingPage = () => {
             <NavBar/>
             <HeroSection/>
             <NewArrivals/>
+            <ImagePrompt/>
         </div>
     );
 }

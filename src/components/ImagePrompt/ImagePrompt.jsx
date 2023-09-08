@@ -1,11 +1,9 @@
 
 import React from "react";
 import "./style.css";
-import { Box, Button } from "@chakra-ui/react";
+import { Button } from "@chakra-ui/react";
 import {FiArrowRight} from "react-icons/fi";
 
-// import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-// import { Carousel } from 'react-responsive-carousel';
 import Carousel from 'react-grid-carousel'
 
 
@@ -13,19 +11,30 @@ export const HeroSection = () => {
 
   const images = ["main-product.png", "main-product.png", "main-product.png"];
 
+  const MyDot = ({ isActive }) => (
+    <span
+      style={{
+        display: 'inline-block',
+        height: isActive ? '8px' : '5px',
+        width: isActive ? '8px' : '5px',
+        background: '#1890ff'
+      }}
+    ></span>
+  )
+
   return (
-    <div class="container" >
+    <div class="container" width={"100%"} >
+
         <Carousel loop={"true"} showDots={"true"} autoplay={2000}>
         {  
               images.map((image) => (
                   <Carousel.Item>
                   <div>
-                      <img src={image}/>
+                      <img src={image} size={"auto"}/>
                   </div>
                  </Carousel.Item>
               ))
         }
-
         </Carousel>
         <div className="slider-section">
             <h3>AirNags®</h3>
