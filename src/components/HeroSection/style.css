@@ -54,3 +54,7 @@
     line-height: 32px; 
     letter-spacing: -0.4px;
 }
+
+.carousel .control-arrow {
+    color: black;
+  }
