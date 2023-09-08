@@ -23,18 +23,18 @@ export const HeroSection = () => {
   )
 
   return (
-    <div class="container">
+    <div class="container" width={"100%"} >
+
         <Carousel loop={"true"} showDots={"true"} autoplay={2000}>
         {  
               images.map((image) => (
                   <Carousel.Item>
                   <div>
-                      <img src={image} />
+                      <img src={image} size={"auto"}/>
                   </div>
                  </Carousel.Item>
               ))
         }
-
         </Carousel>
         <div className="slider-section">
             <h3>AirNags®</h3>

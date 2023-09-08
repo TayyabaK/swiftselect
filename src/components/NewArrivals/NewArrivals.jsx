@@ -80,28 +80,43 @@ const products = [
   {
     id:11,
     img: img,
-    title: "Product 10",
+    title: "Product 11",
+    dPrice: "$550",
+    oPrice: "$650",
+  },
+  {
+    id:12,
+    img: img,
+    title: "Product 12",
     dPrice: "$550",
     oPrice: "$650",
   }
 ]
+
 
 export const NewArrivals = () => {
 
   const images = [img, img, img, img, img, img, img, img, img, img, img, img];
 
   return (
-    <Box justifyContent={"space-between"} margin={"3rem 4rem"}>
+    <Box justifyContent={"space-between"} margin={"0px 40px 10px 40px"} >
 
+    <Box display={"flex"}>
+      <Heading fontFamily={"Space Grotesk"} fontSize={"2rem"} letterSpacing={"-0.6px"}
+      margin={"20px 4px 20px 28px"}
+      >New Arrivals</Heading>
+      </Box>
     <Carousel cols={4} loop showDots={"false"}>
 
       {products.map((product, i) => (
         <Carousel.Item key={product.id}>
         <Box mr="10px" ml={"10px"}> 
-          <Card position="relative" width={"357px"} height={"420px"} borderEndRadius={"12px"}>
+          <Card position="relative" width={"300px"} height={"350px"} borderEndRadius={"12px"}>
             <Image src={product.img} />
-            <Box position="absolute" bottom="0" left="0" right="0" color="white" p="1rem" zIndex="1">
-             <Heading fontSize={"1rem"} fontFamily={"Space Grotesk"} color="black" textAlign={"center"}>{product.title} </Heading>
+            <Box position="absolute"
+            bottom="0px" left="80px" right="0px" color="white" p="1rem" zIndex="1" 
+            justifySelf={"center"}>
+             <Button><Heading fontSize={"1rem"} fontFamily={"Space Grotesk"} color="black" textAlign={"center"}>{product.title} </Heading></Button>
               {/* <Box justifyContent="center" display={"flex"}>
                 <Heading fontSize={"1rem"} padding={"8px"} color="black">{product.dPrice}</Heading>
                 <Heading fontSize={"1rem"} padding={"8px"} color="red"><s>{product.oPrice}</s></Heading>
