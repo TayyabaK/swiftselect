@@ -12,7 +12,7 @@ export const HeroSection = () => {
               <img src={image} />
           </Box>
 
-        <Box zIndex={1}  position={"absolute"} margin={"100px 800px 160px 52px"}>
+        <Box zIndex={1}  position={"absolute"} margin={"60px 750px 160px 52px"}>
             <Heading fontFamily={"Space Grotesk"} 
             fontSize={"2rem"} fontWeight={"bold"}
             >
