@@ -55,7 +55,7 @@ const NavBar = () => {
           {links.map((item) => (
             <Box display="flex" mx="1rem" key={item}>
               <ListItem fontWeight="bold">{item}</ListItem>
-              <ChevronDownIcon />
+              <BiSolidChevronDown />
             </Box>
           ))}
         </UnorderedList> 

@@ -116,12 +116,8 @@ export const NewArrivals = () => {
             <Box position="absolute"
             bottom="0px" left="80px" right="0px" color="white" p="1rem" zIndex="1" 
             justifySelf={"center"}>
-             <Button><Heading fontSize={"1rem"} fontFamily={"Space Grotesk"} color="black" textAlign={"center"}>{product.title} </Heading></Button>
-              {/* <Box justifyContent="center" display={"flex"}>
-                <Heading fontSize={"1rem"} padding={"8px"} color="black">{product.dPrice}</Heading>
-                <Heading fontSize={"1rem"} padding={"8px"} color="red"><s>{product.oPrice}</s></Heading>
-              </Box> */}
-              </Box>
+               <Button><Heading fontSize={"1rem"} fontFamily={"Space Grotesk"} color="black" textAlign={"center"}>{product.title} </Heading></Button>              
+            </Box>
           </Card> 
           </Box>
         </Carousel.Item>

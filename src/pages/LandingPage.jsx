@@ -6,6 +6,7 @@ import NewArrivals from "../components/NewArrivals/NewArrivals";
 import ProductGrid from "../components/ProductGrid/ProductGrid";
 import ImagePrompt from "../components/ImagePrompt/ImagePrompt";
 import PromotionVideo from "../components/PromotionVideo/PromotionVidoe";
+import NewsletterSubscribe from "../components/NewsletterSubscribe/NewsletterSubscribe";
 const LandingPage = () => {
 
     return (
@@ -17,6 +18,7 @@ const LandingPage = () => {
             <ImagePrompt/>
             <ProductGrid/>
             <PromotionVideo/>
+            <NewsletterSubscribe/>
         </div>
     );
 }
