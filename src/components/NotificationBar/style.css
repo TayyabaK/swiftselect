@@ -6,11 +6,27 @@
 
  .notification-bar {
     background-color: black;
-    display: flex;
+    height: 40px;
 }
 
 .notification-text {
-    flex: 1;
-    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     color: white;
+    text-align: center;
+}
+
+.notification-icon{
+    position: absolute;
+    top: 50%;
+    right: 1%;
+    transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 640px) {
+    .notification-bar{
+        height: 60px;        
+        }
 }

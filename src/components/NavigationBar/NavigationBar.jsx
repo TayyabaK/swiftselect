@@ -31,30 +31,30 @@ const NavBar = () => {
   };
 
   return (
-    <Box
+    <Box 
       display="flex"
       justifyContent="space-between"
-      padding="0.7rem 1.5rem"
-      margin= "0px 0px 0px 35px"
-
+      // padding="0.7rem 1.5rem"
+      margin= "2% 5% 2% 5%"
+      backgroundColor={"#f5f5f5"}
       alignItems="center"
     >
-      <Box width="400px">
+      <Box>
         <Box display="flex" alignItems="center" gap="0.25rem">
-          <Image src={logo} height="26px" width="26px" />
-          <Heading fontSize="1.5rem">SwiftSelect</Heading>
+          <Image src={logo} size={"2rem"} />
+          <Heading fontSize="2rem">SwiftSelect</Heading>
         </Box>
       </Box>
 
-      <Box width="400px" justifyContent="center">
+      <Box justifyContent="center">
         <UnorderedList
           display={{ base: 'none', md: 'flex' }}
           flexDirection="row"
           listStyleType="none"
         >
           {links.map((item) => (
-            <Box display="flex" mx="1rem" key={item}>
-              <ListItem fontWeight="bold">{item}</ListItem>
+            <Box display="flex" mx="1rem" key={item} alignItems={"center"}>
+              <ListItem ><Heading fontSize={"1.25rem"}>{item}</Heading></ListItem>
               <BiSolidChevronDown />
             </Box>
           ))}
@@ -62,15 +62,14 @@ const NavBar = () => {
       </Box>
 
       <Box
-        width="400px"
         padding="0.7rem 1.5rem"
         justifyContent="flex-end"
         gap="1rem"
         display={{ base: 'none', md: 'flex' }}
       >
-        <FaSearch width="28px" height="28px" color="black" />
-        <FaUser width="28px" height="28px" color="black" />
-        <FaShoppingCart width="28px" height="28px" color="black" />
+        <FaSearch size={"1.5rem"} color="black" />
+        <FaUser size={"1.5rem"} color="black" />
+        <FaShoppingCart size={"1.5rem"}  color="black" />
       </Box>
 
       <Box display={{ base: 'block', md: 'none' }}>
@@ -98,6 +97,7 @@ const NavBar = () => {
             >
               {links.map((item) => (
                 <ListItem
+                  size={"1.5rem"}
                   fontWeight="bold"
                   key={item}
                   onClick={toggleDrawer}
@@ -115,9 +115,9 @@ const NavBar = () => {
               gap="2rem"
               >
 
-              <FaSearch width="28px" height="28px" color="black" />
-              <FaUser width="28px" height="28px" color="black" />
-              <FaShoppingCart width="28px" height="28px" color="black" />
+              <FaSearch size={"1.5rem"} color="black" />
+              <FaUser size={"1.5rem"} color="black" />
+              <FaShoppingCart size={"1.5rem"} color="black" />
             </Box>
          
           </DrawerBody>

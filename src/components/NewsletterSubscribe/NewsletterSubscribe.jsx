@@ -7,8 +7,8 @@ import img  from "../../public/news-letter-img.png";
 const NewsletterSubscribe = () => {
 
     return (
-        <Flex justifyContent={"space-between"} alignItems={"center"} margin={"52px"}>    
-            <Flex flexDirection={"column"}>
+        <Flex justifyContent={"space-between"} alignItems={"center"} margin={"52px"} backgroundColor={"#f5f5f5"}>    
+            <Flex flexDirection={"column"} ml={"1.5rem"}>
                 <Heading fontFamily={"Space Grotesk"} fontSize={"1.5rem"} letterSpacing={"-0.4px"}>Join our newsletter. </Heading>
                 <Heading fontFamily={"Space Grotesk"} fontSize={"1.5rem"} letterSpacing={"-0.4px"}> Enjoy big discounts.</Heading>
                 
