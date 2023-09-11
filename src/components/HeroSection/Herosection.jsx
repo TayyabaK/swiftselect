@@ -34,9 +34,6 @@ const DesktopHeroSection = () => {
         enableAutoPlay={true}
         autoPlaySpeed={2000}
         showArrows={false}
-        pagination={false}
-        transitionMs={500}
-        isRTL={false}
       >
         {images.map((image, index) => (
           <div key={index}>
@@ -53,10 +50,10 @@ const DesktopHeroSection = () => {
         transform="translateY(-50%)"
         color="black"
         maxWidth="35%"
-        padding="2rem"
+        pb="2rem"
       >
-        <Heading> AirNags®</Heading>
-        <Text flexWrap={"wrap"}>
+        <Heading  pb="2rem"> AirNags®</Heading>
+        <Text pb="2rem" flexWrap={"wrap"}>
           Keep your everyday style chic and on-trend with our selection 20+ styles to choose from.
         </Text>
         <Box
@@ -112,15 +109,14 @@ const MobHeroSection = () => {
             autoPlaySpeed={2000}
             showArrows={false}
           >
-            <Box>
             {images.map((image, index) => (
               <div key={index}>
                 <img src={image} alt={`Image ${index + 1}`} width={"100%"} height={"50%"} objectFit={"scale-down"} />
               </div>
             ))}
-            </Box>
           </Carousel>
         </Flex>
+
       </Flex>
     );
   };
