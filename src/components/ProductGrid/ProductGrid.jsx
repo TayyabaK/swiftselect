@@ -352,7 +352,7 @@ const ProductGrid = () => {
 
 
     return (
-        <Flex justifyContent={"center"} flexDirection={"column"}>  
+        <Flex justifyContent={"space-between"} flexDirection={"column"} backgroundColor={"white"}>  
 
         <Flex justifyContent={"center"}>
             <Link padding={"6px"} fontFamily={"Inter"} fontStyle={"bold"} onClick={()=> handleTabsChange(0)} color={color1}>Best Sellers</Link>

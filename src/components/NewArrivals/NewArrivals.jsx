@@ -2,7 +2,7 @@ import React from "react";
 import { Button, Image, Box, Card, Heading} from "@chakra-ui/react";
 import {FiArrowRight} from "react-icons/fi";
 
-import Carousel from 'react-grid-carousel'
+import Carousel from 'react-elastic-carousel';
 
 import img from "../../public/na-1.png";
 
@@ -96,22 +96,31 @@ const products = [
 
 export const NewArrivals = () => {
 
+  const breakPoints = [
+    { width: 1, itemsToShow: 1 },
+    { width: 550, itemsToShow: 2},
+    { width: 768, itemsToShow: 3},
+    { width: 1200, itemsToShow: 4 },
+  ];
+
   const images = [img, img, img, img, img, img, img, img, img, img, img, img];
 
   return (
-    <Box justifyContent={"space-between"} margin={"0px 40px 10px 40px"} >
+    <Box justifyContent={"space-between"} margin={"3rem"} backgroundColor={"white"} >
 
-    <Box display={"flex"}>
-      <Heading fontFamily={"Space Grotesk"} fontSize={"2rem"} letterSpacing={"-0.6px"}
-      margin={"20px 4px 20px 28px"}
+    <Box display={"flex"} justifyContent={{base:"center", md:"left"}}>
+      <Heading fontFamily={"Space Grotesk"} fontSize={"1.5rem"} letterSpacing={"-0.6px"}
+      padding={"1rem"}
       >New Arrivals</Heading>
       </Box>
-    <Carousel cols={4} loop showDots={"false"}>
 
+    <Carousel breakPoints={breakPoints} 
+    backgroundColor={"white"}
+    showArrows={false}
+     >
       {products.map((product, i) => (
-        <Carousel.Item key={product.id}>
-        <Box mr="10px" ml={"10px"}> 
-          <Card position="relative" width={"300px"} height={"350px"} borderEndRadius={"12px"}>
+        <Box key={product.id} > 
+          <Card position="relative" width={"300px"} height={"350px"} borderEndRadius={"12px"} margin={"2rem"}>
             <Image src={product.img} />
             <Box position="absolute"
             bottom="0px" left="80px" right="0px" color="white" p="1rem" zIndex="1" 
@@ -120,7 +129,6 @@ export const NewArrivals = () => {
             </Box>
           </Card> 
           </Box>
-        </Carousel.Item>
       ))}
     </Carousel>
     </Box>

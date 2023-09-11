@@ -1,31 +1,47 @@
 import React from "react";
-import { Box, Heading } from "@chakra-ui/react";
-import {FiArrowRight} from "react-icons/fi";
+import { Box, Flex, Heading, Image, Text } from "@chakra-ui/react";
 
-import image from "../../public/wrist-watch.png"
+import img from "../../public/wrist-watch.png";
 
-export const HeroSection = () => {
-
+const ImagePrompt = () => {
   return (
-    <Box display="flex" position={"relative"} margin={"3rem 3.8rem 3rem 3.8rem"} height={"50%"}>
-          <Box>
-              <img src={image} />
-          </Box>
-
-        <Box zIndex={1}  position={"absolute"} margin={"60px 750px 160px 52px"}>
-            <Heading fontFamily={"Space Grotesk"} 
-            fontSize={"2rem"} fontWeight={"bold"}
+    <Flex
+      margin={{ base: "2rem", md: "3rem" }}
+      flexDirection={{ base: "column", md: "row" }}
+      alignItems="center"
+      justifyContent="center"
+      p={4}
+      bg="#f5f5f5" // Use "bg" for background color
+    >
+            <Box
+              color="black"
+              maxWidth={{ base: "100%", md: "35%" }}
+              pb={{ base: "1rem", md: 0 }}
+              pl={{ base: "2rem", md: "2rem" }}
+              pt={{ base: "1rem", md: "2rem" }}
             >
-              RUN SMARTER +
-              </Heading>
-            <Box margin={"1rem 0rem 1rem 0rem"}>
-
-              <p fontFamily="Inter">Phosfluor escently engage worldwide methodologies with web-enabled process-centric technology.</p>
+              <Heading pb="2rem">RUN SMARTER +</Heading>
+              <Text pb="2rem" flexWrap={"wrap"}>
+                Phosfluor escently engage worldwide methodologies with web-enabled
+                process-centric technology.
+              </Text>
+              <Box
+                display={"flex"}
+                flexDirection={"row"}
+                alignItems={"center"}
+                textDecoration={"underline"}
+              >
+                <Heading className="click-text" fontSize={"1.5rem"}>
+                  SHOP NOW
+                </Heading>
+              </Box>
             </Box>
-            <Box fontFamily="Space Grotesk" fontSize={"1.5rem"} display={"flex"} alignItems={"center"} fontWeight={"bold"}><u>SHOP NOW</u><FiArrowRight/></Box>
-        </Box>
-    </Box>
+
+      <Box backgroundColor={"#f5f5f5"} width={"inherit"}>
+        <Image src={img} alt="Responsive Image" objectFit={"cover"}/>
+      </Box>
+    </Flex>
   );
 };
 
-export default HeroSection;
+export default ImagePrompt;
