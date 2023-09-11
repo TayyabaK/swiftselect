@@ -1,6 +1,6 @@
 import NotificationBar from "../components/NotificationBar/NotificationBar";
 import NavBar from "../components/NavigationBar/NavigationBar";
-import { HeroSection } from "../components/HeroSection/Herosection";
+import HeroSection from "../components/HeroSection/Herosection";
 import { Box } from "@chakra-ui/react";
 import NewArrivals from "../components/NewArrivals/NewArrivals";
 import ProductGrid from "../components/ProductGrid/ProductGrid";
