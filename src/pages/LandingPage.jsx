@@ -12,7 +12,7 @@ import IconBox from "../components/IconBox/IconBox";
 const LandingPage = () => {
 
     return (
-        <Box backgroundColor={"white"}>
+        <Box backgroundColor={"white"} justifyContent={"center"} >
           <Box backgroundColor={"#f5f5f5"}>
             <NotificationBar />
                 <NavBar/>

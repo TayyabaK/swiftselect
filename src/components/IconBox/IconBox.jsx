@@ -1,46 +1,42 @@
-import { Box, Flex, Heading } from '@chakra-ui/react'
+import { Box, Center, Divider, Flex, Heading, SimpleGrid, Text } from '@chakra-ui/react'
 import React from 'react'
 
 import {FaLock, FaPhone, FaShippingFast, FaWallet} from "react-icons/fa";
-
+import {LiaShippingFastSolid, LiaPhoneSolid} from "react-icons/lia";
+import {CiMoneyCheck1} from "react-icons/ci";
+import {MdOutlineLock} from "react-icons/md";
 
 const IconBox = () => {
-  return (
-        <Flex justifyContent={"space-between"} padding={"52px"}>
-            <Box display={"flex"} flexDirection={"row"}>
-                <Box padding={"4px"}> <FaShippingFast size={"2rem"}/></Box>
-                <Flex flexDirection={"column"} padding={"4px"}>
-                    <Heading fontSize={"1.25rem"} letterSpacing={"-0.4px"}>Free Shipping</Heading>
-                    <p color={"#807E7E"}>Orders above $200</p>
-                </Flex>
-            </Box>    
+const icons = [LiaShippingFastSolid, CiMoneyCheck1, LiaPhoneSolid, MdOutlineLock];
+const titles = ["Free Shipping", "Money-back", "Premium Support", "Secure Payments"];
+const descriptions = ["Orders above $200", "30 day Guarantee", "phone and email support", "Secured by Stripe"];
 
-            <Box display={"flex"} flexDirection={"row"}>
-                <Box padding={"4px"}> <FaWallet size={"2rem"}/></Box>
-                <Flex flexDirection={"column"} padding={"4px"}>
-                    <Heading fontSize={"1.25rem"} letterSpacing={"-0.4px"}>Money-back</Heading>
-                    <p color={"#807E7E"}>30 day Guarantee</p>
-                </Flex>
-            </Box>    
+    return (
 
-            <Box display={"flex"} flexDirection={"row"}>
-                <Box padding={"4px"}> <FaPhone size={"2rem"}/></Box>
-                <Flex flexDirection={"column"} padding={"4px"}>
-                    <Heading fontSize={"1.25rem"} letterSpacing={"-0.4px"}>Premium Support</Heading>
-                    <p color={"#807E7E"}>phone and email support</p>
-                </Flex>
-            </Box>    
+        <SimpleGrid justifyContent={"space-between"} columns={{base:2, md:2, lg:4}} spacing={"10"} margin={"2rem"} 
+               
+        >
+            {icons.map((icon, index) => (
 
-            <Box display={"flex"} flexDirection={"row"}>
-                <Box padding={"4px"}> <FaLock size={"2rem"}/></Box>
-                <Flex flexDirection={"column"} padding={"4px"}>
-                    <Heading fontSize={"1.25rem"} letterSpacing={"-0.4px"}>Secure Payments</Heading>
-                    <p color={"#807E7E"}>Secured by Stripe</p>
-                </Flex>
-            </Box>   
+                <Box display={"flex"} flexDirection={{base:"column", md:"column", lg:"row" }}  
+                justifyContent={{base:"center", md:"center", lg:"space-between"}} 
+                alignItems={{base:"center", md:"center", lg:"left"}} maxW="fit-content" 
+                marginX={{base:"auto", md:"auto", lg:"0"}}
+                key={index}
+                >
+                    <Box padding={"4px"}> {icon({size:"2rem"})}</Box>
+                    <Flex flexDirection={"column"} padding={"4px"}>
+                        <Heading fontSize={"1.25rem"} letterSpacing={"-0.4px"} whiteSpace={"nowrap"}>{titles[index]}</Heading>
+                        <Text color={"#807E7E"} fontSize={"1rem"} whiteSpace={"nowrap"}>{descriptions[index]}</Text>
+                    </Flex>
+                </Box>
 
-        </Flex>        
-  )
+            ))}
+            </SimpleGrid>       
+ 
+    )
+
 }
 
-export default IconBox
+
+export default IconBox;

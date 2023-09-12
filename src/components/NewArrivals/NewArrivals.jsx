@@ -99,7 +99,7 @@ export const NewArrivals = () => {
   const breakPoints = [
     { width: 1, itemsToShow: 1 },
     { width: 550, itemsToShow: 2},
-    { width: 768, itemsToShow: 3},
+    { width: 768, itemsToShow: 4},
     { width: 1200, itemsToShow: 4 },
   ];
 
@@ -112,25 +112,28 @@ export const NewArrivals = () => {
       <Heading fontFamily={"Space Grotesk"} fontSize={"1.5rem"} letterSpacing={"-0.6px"}
       padding={"1rem"}
       >New Arrivals</Heading>
-      </Box>
+    </Box>
 
-    <Carousel breakPoints={breakPoints} 
-    backgroundColor={"white"}
-    showArrows={false}
-     >
-      {products.map((product, i) => (
-        <Box key={product.id} > 
-          <Card position="relative" width={"300px"} height={"350px"} borderEndRadius={"12px"} margin={"2rem"}>
-            <Image src={product.img} />
-            <Box position="absolute"
-            bottom="0px" left="80px" right="0px" color="white" p="1rem" zIndex="1" 
-            justifySelf={"center"}>
-               <Button><Heading fontSize={"1rem"} fontFamily={"Space Grotesk"} color="black" textAlign={"center"}>{product.title} </Heading></Button>              
+    <Box backgroundColor={"white"}>    
+        <Carousel breakPoints={breakPoints} 
+      showArrows={true}
+      >
+        {products.map((product, i) => (
+          <Box key={product.id} padding={"rem"} justifyContent={"space-between"} > 
+            <Card position="relative" width={"300px"} height={"350px"} borderEndRadius={"12px"} padding={"2rem"}>
+              <Image src={product.img} />
+
+              <Box position="absolute"
+                 left="80px" bottom="0px" top="15rem" color="white" p="1rem" zIndex="1" 
+                  justifyContent={"center"}>
+                <Button backgroundColor={"white"}><Heading fontSize={"1rem"} fontFamily={"Space Grotesk"} color="black" textAlign={"center"}>{product.title} </Heading></Button>              
+              </Box>
+            </Card> 
             </Box>
-          </Card> 
-          </Box>
-      ))}
-    </Carousel>
+        ))}
+      </Carousel>
+    </Box>
+
     </Box>
   );
 };

@@ -326,25 +326,42 @@ const ProductGrid = () => {
     const [color2, setColor2] = React.useState("#A7A7A7")
     const [color3, setColor3] = React.useState("#A7A7A7")
 
+    const [textDecoration1, setTextDecoration1] = React.useState("underline")
+    const [textDecoration2, setTextDecoration2] = React.useState("none")
+    const [textDecoration3, setTextDecoration3] = React.useState("none")
+
+
     const handleTabsChange = (index) => {
         if (index === 0) {
             setProducts(best_sellers)
             setColor1("#000000")
             setColor2("#A7A7A7")
             setColor3("#A7A7A7")
-          
+
+            setTextDecoration1("underline")
+            setTextDecoration2("none")
+            setTextDecoration3("none")
         }
         else if (index === 1) {
             setProducts(new_arrivals)
             setColor1("#A7A7A7")
             setColor2("#000000")
             setColor3("#A7A7A7")
+
+            setTextDecoration1("none")
+            setTextDecoration2("underline")
+            setTextDecoration3("none")
+
         }
         else if (index === 2) {
             setProducts(sale)
             setColor1("#A7A7A7")
             setColor2("#A7A7A7")
             setColor3("#000000")
+
+            setTextDecoration1("none")
+            setTextDecoration2("none")
+            setTextDecoration3("underline")
         }
     }
 
@@ -352,24 +369,24 @@ const ProductGrid = () => {
 
 
     return (
-        <Flex justifyContent={"space-between"} flexDirection={"column"} backgroundColor={"white"}>  
+        <Flex justifyContent={"space-between"} flexDirection={"column"} backgroundColor={"white"} >  
 
         <Flex justifyContent={"center"}>
-            <Link padding={"6px"} fontFamily={"Inter"} fontStyle={"bold"} onClick={()=> handleTabsChange(0)} color={color1}>Best Sellers</Link>
-            <Link padding={"6px"} fontFamily={"Inter"} fontStyle={"bold"}  onClick={()=> handleTabsChange(1)} color={color2}>New Arrivals</Link>
-            <Link padding={"6px"} fontFamily={"Inter"} fontStyle={"bold"}  onClick={()=> handleTabsChange(2)} color={color3}>Sale</Link>
+            <Link fontSize={"1rem"} padding={"1.5rem"} fontFamily={"Inter"} fontStyle={"bold"} onClick={()=> handleTabsChange(0)} color={color1} textDecoration={textDecoration1}>Best Sellers</Link>
+            <Link padding={"1.5rem"} fontFamily={"Inter"} fontStyle={"bold"}  onClick={()=> handleTabsChange(1)} color={color2} textDecoration={textDecoration2}>New Arrivals</Link>
+            <Link padding={"1.5rem"} fontFamily={"Inter"} fontStyle={"bold"}  onClick={()=> handleTabsChange(2)} color={color3} textDecoration={textDecoration3}>Sale</Link>
         </Flex>
 
-        <Flex display="flex" margin={"56px 52px 56px 52px"} justifyContent={"space-between"}>
-                <SimpleGrid columns={{base:1, md:2, lg:4}} justifyContent={"space-between"} gap={4}>
+        <Flex display="flex" margin={"56px 52px 56px 52px"} justifyContent={"center"}>
+                <SimpleGrid columns={{base:1, md:2, lg:4}} justifyContent={"center"} gap={4}>
                 {
                     products.map((product) => (
-                        <Box mr="10px" ml={"10px"}> 
+                        <Box mr="10px" ml={"10px"} justifyContent={"center"}> 
                         <Card position="relative" borderEndRadius={"12px"}>
                           <Image src={product.img} width={"310px"} height={"413px"} objectFit={"fit"}/>
                           <Box 
                           bottom="0px" left="80px" right="0px" color="white" p="1rem" zIndex="1" 
-                          justifySelf={"center"}>
+                          justifyContent={"center"}>
                            <Heading fontSize={"1rem"} fontFamily={"Space Grotesk"} color="black" textAlign={"left"}>{product.title} </Heading>
                             <Box justifyContent="left" display={"flex"}>
                               <Heading fontSize={"1rem"} padding={"6px 0px 6px 0px"} color="black">{product.dPrice}</Heading>

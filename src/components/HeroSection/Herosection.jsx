@@ -75,18 +75,16 @@ const MobHeroSection = () => {
     const images = [img1, img2, img3];
   
     return (
-      <Flex width="100%" minHeight="100vh" flexDirection={"column"} justifyContent={"flex-start"}>
+      <Flex width="full" flexDirection={"column"} justifyContent={"start"}>
         <Flex
-          className="slider-section"
-          justifyItems={"flex-start"}
-          alignItems="center"    // Center text vertically
+          justifyContent={"start"}
+          alignItems="start"    // Center text vertically
           flexDirection="column" // Center text both horizontally and vertically
-          minHeight="50vh"       // Adjust the height as needed
           color="black"
           padding="2rem"
         >
-          <Heading textAlign={"flex-start"}> AirNags®</Heading>
-          <Text textAlign="flex-start" flexWrap={"wrap"}>
+          <Heading > AirNags®</Heading>
+          <Text flexWrap={"wrap"}>
             Keep your everyday style chic and on-trend with our selection of 20+ styles to choose from.
           </Text>
           <Box
