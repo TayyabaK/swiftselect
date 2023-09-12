@@ -8,6 +8,7 @@ import ImagePrompt from "../components/ImagePrompt/ImagePrompt";
 import PromotionVideo from "../components/PromotionVideo/PromotionVidoe";
 import NewsletterSubscribe from "../components/NewsletterSubscribe/NewsletterSubscribe";
 import IconBox from "../components/IconBox/IconBox";
+import Footer from "../components/Footer/Footer";
 
 const LandingPage = () => {
 
@@ -24,6 +25,7 @@ const LandingPage = () => {
             <PromotionVideo/>
             <NewsletterSubscribe/>
             <IconBox/>
+            <Footer/>
         </Box>
     );
 }
