@@ -8,24 +8,23 @@ import { FaFacebook, FaInstagram, FaTwitter, FaEnvelope } from 'react-icons/fa'
 
 const FooterMob = () => {
   return (
-    <Box>
-    <Box  width={"full"} margin="2rem" display="flex" backgroundColor="#FAFAFB">
-        <VStack alignItems="flex-start" mt="3rem" width={'full'}>
-            
-            <Box display="flex" alignItems="left" gap="0.25rem" padding="0.5rem">
+    <Box width={"full"}>
+    <Box  marginX="2rem" display="flex" backgroundColor="#FAFAFB">
+        <VStack  mt="2rem" ml={"2rem"} justifyContent={"left"}>
+            <Box display="flex" justifyContent={"flex-start"}>
              <Image src={logo} size="2rem" />
-                <Heading fontSize="1.5rem">SwiftSelect</Heading>
+                <Heading fontSize="1.5rem"  >SwiftSelect</Heading>         
             </Box>
+                <Text> Experience the future of e-commerce design with SHOPR</Text>
 
-            <Text padding="0.5rem">
-                Experience the future of e-commerce design with SHOPR
-            </Text>
-
-            <ShopMenu />
-            <InformationMenu />
-            <CompanyMenu />    
+            <Box padding={"0.5rem"}>
+                <ShopMenu width={"inherit"}/>
+                <InformationMenu width={"inherit"}/>
+                <CompanyMenu width={"inherit"}/>    
+            </Box>
         </VStack>
         </Box>
+
 
      <Center>
         <SocialMediaBar/>
@@ -47,18 +46,18 @@ const ShopMenu = () => {
   }
 
   return (
-    <Box width ={"full"} display="flex" ml="0.5rem">
+    <Box  display="flex" ml="0.5rem" width={"full"}>
       <VStack>
       <Box display="flex" mt={2}>
-          <ButtonGroup variant="link" onClick={toggleMenu}>
+          <ButtonGroup variant="link" onClick={toggleMenu} gap={"26.5vw"}>
             <Button>
                 <Heading fontSize="1rem" color="black" >
                     Shop
                 </Heading>
               </Button>
-              <Spacer/>
+              <Spacer />
               <Button>
-              <FaChevronDown size="0.7rem"/>
+                <FaChevronDown size="0.7rem"/>
                 </Button>
           </ButtonGroup>
         </Box>
@@ -100,18 +99,18 @@ const InformationMenu = () => {
     <Box width ={"full"} display="flex" ml="0.5rem">
     <VStack>
     <Box display="flex" mt={2}>
-        <ButtonGroup variant="link" onClick={toggleMenu}>
-          <Button>
-              <Heading fontSize="1rem" color="black" >
-                  Information
-              </Heading>
-            </Button>
-            <Spacer/>
+          <ButtonGroup variant="link" onClick={toggleMenu} gap={"22.5vw"}>
             <Button>
-            <FaChevronDown size="0.7rem"/>
+                <Heading fontSize="1rem" color="black" >
+                    Information
+                </Heading>
               </Button>
-        </ButtonGroup>
-      </Box>
+              <Spacer />
+              <Button>
+                <FaChevronDown size="0.7rem"/>
+                </Button>
+          </ButtonGroup>
+        </Box>
       
       <Divider mt={1} borderColor="black" />
 
@@ -147,21 +146,21 @@ const CompanyMenu = () => {
     }
   
     return (
-        <Box width ={"full"} display="flex" ml="0.5rem">
+        <Box display="flex" ml="0.5rem">
         <VStack>
         <Box display="flex" mt={2}>
-            <ButtonGroup variant="link" onClick={toggleMenu}>
+          <ButtonGroup variant="link" onClick={toggleMenu} gap={"24vw"}>
+            <Button>
+                <Heading fontSize="1rem" color="black" >
+                    Company
+                </Heading>
+              </Button>
+              <Spacer />
               <Button>
-                  <Heading fontSize="1rem" color="black" >
-                      Company
-                  </Heading>
-                </Button>
-                <Spacer/>
-                <Button>
                 <FaChevronDown size="0.7rem"/>
-                  </Button>
-            </ButtonGroup>
-          </Box>
+                </Button>
+          </ButtonGroup>
+        </Box>
           
           <Divider mt={1} borderColor="black" />
           

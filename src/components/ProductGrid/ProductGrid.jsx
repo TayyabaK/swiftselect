@@ -383,7 +383,7 @@ const ProductGrid = () => {
                     products.map((product) => (
                         <Box mr="10px" ml={"10px"} justifyContent={"center"}> 
                         <Card position="relative" borderEndRadius={"12px"}>
-                          <Image src={product.img} width={"310px"} height={"413px"} objectFit={"fit"}/>
+                          <Image src={product.img} objectFit={"fit"}/>
                           <Box 
                           bottom="0px" left="80px" right="0px" color="white" p="1rem" zIndex="1" 
                           justifyContent={"center"}>

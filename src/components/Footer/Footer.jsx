@@ -7,7 +7,7 @@ import FooterMob from './FooterMob'
 const Footer = () => {
     return (
         <Box width={"full"}>
-            <Box display={{base:"none", md:"flex", lg:"flex"}}> 
+            <Box display={{base:"none", md:"flex", lg:"flex"}} width={"full"}> 
                 <FooterDesktop/>
             </Box>
             <Box display={{base:"flex", md:"none", lg:"none"}} width={"full"}>

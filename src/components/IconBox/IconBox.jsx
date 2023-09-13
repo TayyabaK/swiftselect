@@ -15,7 +15,7 @@ const descriptions = ["Orders above $200", "30 day Guarantee", "phone and email 
 
         <SimpleGrid justifyContent={"space-between"} columns={{base:2, md:2, lg:4}} spacing={"10"} margin={"2rem"} 
                
-        >
+               >
             {icons.map((icon, index) => (
 
                 <Box display={"flex"} flexDirection={{base:"column", md:"column", lg:"row" }}  

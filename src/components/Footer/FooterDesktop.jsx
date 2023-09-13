@@ -7,11 +7,11 @@ import { FaFacebook, FaInstagram, FaTwitter, FaEnvelope } from 'react-icons/fa'
 
 const FooterDesktop = () => {
     return (
-        <Box display={"flex"}  backgroundColor={"#FAFAFB"} margin={"3rem"} flexDirection={"row"}>
+        <Box display={"flex"} justifyContent={"space-between"}  backgroundColor={"#FAFAFB"} margin={"3rem"} flexDirection={"row"} width={"full"}>
 
 
             <VStack alignItems={"flex-start"} mt={"3rem"}>
-                <Box display="flex" alignItems="left" gap="0.25rem" pl={"1rem"}>
+                <Box display="flex" alignItems="left" gap={"2rem"} pl={"1rem"}>
                     <Image src={logo} size={"2rem"} />
                     <Heading fontSize="1.5rem">SwiftSelect</Heading>
                 </Box>
@@ -27,7 +27,6 @@ const FooterDesktop = () => {
                     <SocialMediaBar />
                 </Box>
             </VStack>
-
             <ShopMenu/>
             <InformationMenu/>
             <CompanyMenu />
@@ -38,7 +37,7 @@ const FooterDesktop = () => {
 
 const ShopMenu = () => {
     return (
-        <VStack alignItems={"flex-start"} mt={"3rem"} ml={"15rem"}>
+        <VStack alignItems={"flex-start"} mt={"3rem"}  >
 
             <Heading  fontSize="1rem">Shop</Heading>
         
@@ -64,7 +63,7 @@ const ShopMenu = () => {
 
 const InformationMenu = () => {
     return (
-        <VStack alignItems={"flex-start"} mt={"3rem"} ml={"7rem"}>
+        <VStack alignItems={"flex-start"} mt={"3rem"} >
 
             <Heading  fontSize="1rem">Information</Heading>
         
@@ -90,7 +89,7 @@ const InformationMenu = () => {
 
 const CompanyMenu = () => {
     return (
-        <VStack alignItems={"flex-start"} mt={"3rem"} ml={"7rem"} mr={"0.5rem"}>
+        <VStack alignItems={"flex-start"} mt={"3rem"} mr={"5%"}>
 
             <Heading  fontSize="1rem">Company</Heading>
         
