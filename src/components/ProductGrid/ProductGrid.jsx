@@ -378,7 +378,7 @@ const ProductGrid = () => {
         </Flex>
 
         <Flex display="flex" margin={"56px 52px 56px 52px"} justifyContent={"center"}>
-                <SimpleGrid columns={{base:1, md:2, lg:4}} justifyContent={"center"} gap={4}>
+                <SimpleGrid columns={{base:2, md:2, lg:4}} justifyContent={"center"} gap={4}>
                 {
                     products.map((product) => (
                         <Box mr="10px" ml={"10px"} justifyContent={"center"}> 
