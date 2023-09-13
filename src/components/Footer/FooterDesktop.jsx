@@ -1,4 +1,4 @@
-import { Box, Image, Flex, Heading, VStack, Text, Link } from '@chakra-ui/react'
+import { Box, Image, Flex, Heading, VStack, Text, Link, Center } from '@chakra-ui/react'
 import React from 'react'
 import logo from '../../public/logo.svg';
 
@@ -8,7 +8,6 @@ import { FaFacebook, FaInstagram, FaTwitter, FaEnvelope } from 'react-icons/fa'
 const FooterDesktop = () => {
     return (
         <Box display={"flex"} justifyContent={"space-between"}  backgroundColor={"#FAFAFB"} margin={"3rem"} flexDirection={"row"} width={"full"}>
-
 
             <VStack alignItems={"flex-start"} mt={"3rem"}>
                 <Box display="flex" alignItems="left" gap={"2rem"} pl={"1rem"}>
@@ -31,7 +30,6 @@ const FooterDesktop = () => {
             <InformationMenu/>
             <CompanyMenu />
         </Box>
-
     )
 }
 

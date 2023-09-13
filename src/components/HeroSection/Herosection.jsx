@@ -37,7 +37,7 @@ const DesktopHeroSection = () => {
       >
         {images.map((image, index) => (
           <div key={index}>
-            <img src={image} alt={`Image ${index + 1}`} />
+            <img src={image} alt={`Image ${index + 1}`} height={"50%"} width={"100%"} />
           </div>
         ))}
       </Carousel>
@@ -45,7 +45,7 @@ const DesktopHeroSection = () => {
       <Box
         className="slider-section"
         position="absolute"
-        top="25%"
+        top="20%"
         left="5%"
         transform="translateY(-50%)"
         color="black"
@@ -83,8 +83,8 @@ const MobHeroSection = () => {
           color="black"
           padding="2rem"
         >
-          <Heading > AirNags®</Heading>
-          <Text flexWrap={"wrap"}>
+          <Heading  pb="2rem"> AirNags®</Heading>
+          <Text  pb="2rem" flexWrap={"wrap"}>
             Keep your everyday style chic and on-trend with our selection of 20+ styles to choose from.
           </Text>
           <Box

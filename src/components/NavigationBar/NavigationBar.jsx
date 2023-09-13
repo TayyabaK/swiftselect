@@ -15,6 +15,8 @@ import {
   DrawerCloseButton,
   DrawerHeader,
   DrawerBody,
+  Center,
+  Spacer,
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon, ChevronDownIcon } from '@chakra-ui/icons';
 
@@ -37,16 +39,15 @@ const NavBar = () => {
       // padding="0.7rem 1.5rem"
       margin= "2% 5% 2% 5%"
       backgroundColor={"#f5f5f5"}
-      alignItems="center"
     >
       <Box>
-        <Box display="flex" alignItems="center" gap="0.25rem">
+        <Box display="flex" alignItems="center" gap="0.25rem" justifyContent={"flex-start"}>
           <Image src={logo} size={"2rem"} />
           <Heading fontSize="2rem">SwiftSelect</Heading>
         </Box>
       </Box>
-
-      <Box justifyContent="center">
+      <Spacer/> 
+      <Center>  
         <UnorderedList
           display={{ base: 'none', md: 'flex' }}
           flexDirection="row"
@@ -59,8 +60,9 @@ const NavBar = () => {
             </Box>
           ))}
         </UnorderedList> 
-      </Box>
-
+        </Center>
+        <Spacer/> 
+     
       <Box
         padding="0.7rem 1.5rem"
         justifyContent="flex-end"

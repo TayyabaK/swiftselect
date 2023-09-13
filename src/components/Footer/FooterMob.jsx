@@ -29,11 +29,7 @@ const FooterMob = () => {
      <Center>
         <SocialMediaBar/>
     </Center>
-    <Center>    
-        <Text fontSize="0.8rem" mt="1rem" mb="1rem">
-            © 2023  SwiftSelect. All rights reserved
-        </Text>
-    </Center>
+
     </Box>
   )
 }

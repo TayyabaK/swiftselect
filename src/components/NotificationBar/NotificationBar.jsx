@@ -1,4 +1,4 @@
-import { Box, Flex } from "@chakra-ui/react";
+import { Box, Flex, Spacer } from "@chakra-ui/react";
 import "./style.css";
 import {RxCross2} from "react-icons/rx";
 

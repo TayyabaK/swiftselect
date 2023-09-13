@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Button, Flex, Heading, Input, Radio } from "@chakra-ui/react";
+import { Box, Button, Divider, Flex, Heading, Input, Radio } from "@chakra-ui/react";
 import { Image } from "@chakra-ui/react";
 import { GoMail } from "react-icons/go";
 
@@ -45,7 +45,6 @@ const DesktopNewsletterSubscribe = () => {
                 Signup
               </Button>
             </Box>
-
           </Flex>
           <Box padding={"4px"}>
             <Radio>I agree to receive marketing emails.</Radio>
